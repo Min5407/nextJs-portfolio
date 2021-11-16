@@ -1,0 +1,21 @@
+@import "./variables.module";
+
+// 데스크탑 (1025px 이상)
+@mixin desktop() {
+  @media all and (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+// 데스크탑 넓이보다 작은 크기일 때 (1024px 이하)
+@mixin tablet() {
+  @media all and (max-width: #{$tablet-width - 1}) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media all and (max-width: #{$mobile-width - 1}) {
+    @content;
+  }
+}
