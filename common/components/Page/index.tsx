@@ -1,10 +1,16 @@
 import React, { ReactNode } from "react";
 import { Header } from "../Header";
-export const Page = ({ children }: { children: ReactNode }) => {
+
+interface Props {
+  children: ReactNode;
+  className?: string;
+}
+
+export const Page = ({ children, className = "" }: Props) => {
   return (
     <>
       <Header />
-      <div className="container">{children}</div>;
+      <div className={`container ${className}`}>{children}</div>
     </>
   );
 };

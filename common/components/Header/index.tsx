@@ -15,7 +15,7 @@ export const Header = () => {
       </Link>
       <Link href="/blog">
         <a
-          className={classNames("nav-blog", {
+          className={classNames("nav-item", {
             active: ROOT.BLOG === pathname,
           })}
         >
